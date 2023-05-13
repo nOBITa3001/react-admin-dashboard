@@ -50,6 +50,20 @@ const Item = ({ title, to, icon, selected, setSelected }: ItemProps) => {
   );
 };
 
+type SubMenuProps = {
+  title: string;
+};
+
+const SubMenu = ({ title }: SubMenuProps) => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+  return (
+    <Typography variant="h6" color={colors.grey[300]} mt={2} mb={1} ml={2}>
+      {title}
+    </Typography>
+  );
+};
+
 export const Sidebar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -92,7 +106,7 @@ export const Sidebar = () => {
                 display="flex"
                 justifyContent="space-between"
                 alignItems="center"
-                ml="15px"
+                ml={2}
               >
                 <Typography variant="h3" color={colors.grey[100]}>
                   ADMINIS
@@ -106,12 +120,11 @@ export const Sidebar = () => {
 
           {/* USER */}
           {!collapsed && (
-            <Box mb="25px">
+            <Box mb={2}>
               <Box display="flex" justifyContent="center" alignItems="center">
                 <img
                   alt="profile-user"
-                  width="100px"
-                  height="100px"
+                  width="40%"
                   src={userImgUrl}
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
@@ -121,7 +134,7 @@ export const Sidebar = () => {
                   variant="h2"
                   color={colors.grey[100]}
                   fontWeight="bold"
-                  sx={{ m: "10px 0 0 0" }}
+                  marginTop="0.25em"
                 >
                   North
                 </Typography>
@@ -133,7 +146,7 @@ export const Sidebar = () => {
           )}
 
           {/* MENU ITMES */}
-          <Box paddingLeft={collapsed ? undefined : "10%"}>
+          <Box paddingLeft={collapsed ? undefined : 2}>
             <Item
               title="Dashboard"
               to="/"
@@ -142,13 +155,7 @@ export const Sidebar = () => {
               setSelected={setSelected}
             />
 
-            <Typography
-              variant="h6"
-              color={colors.grey[300]}
-              sx={{ m: "15px 0 5px 20px" }}
-            >
-              Data
-            </Typography>
+            <SubMenu title="Data" />
             <Item
               title="Manage Team"
               to="/team"
@@ -171,13 +178,7 @@ export const Sidebar = () => {
               setSelected={setSelected}
             />
 
-            <Typography
-              variant="h6"
-              color={colors.grey[300]}
-              sx={{ m: "15px 0 5px 20px" }}
-            >
-              Pages
-            </Typography>
+            <SubMenu title="Pages" />
             <Item
               title="Profile Form"
               to="/form"
@@ -200,13 +201,7 @@ export const Sidebar = () => {
               setSelected={setSelected}
             />
 
-            <Typography
-              variant="h6"
-              color={colors.grey[300]}
-              sx={{ m: "15px 0 5px 20px" }}
-            >
-              Charts
-            </Typography>
+            <SubMenu title="Charts" />
             <Item
               title="Bar Chart"
               to="/bar"
