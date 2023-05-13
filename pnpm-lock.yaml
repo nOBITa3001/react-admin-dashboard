@@ -13,9 +13,15 @@ dependencies:
   '@fullcalendar/daygrid':
     specifier: ^6.1.7
     version: 6.1.7(@fullcalendar/core@6.1.7)
+  '@fullcalendar/interaction':
+    specifier: ^6.1.7
+    version: 6.1.7(@fullcalendar/core@6.1.7)
   '@fullcalendar/list':
     specifier: ^6.1.7
     version: 6.1.7(@fullcalendar/core@6.1.7)
+  '@fullcalendar/react':
+    specifier: ^6.1.7
+    version: 6.1.7(@fullcalendar/core@6.1.7)(react-dom@18.2.0)(react@18.2.0)
   '@fullcalendar/timegrid':
     specifier: ^6.1.7
     version: 6.1.7(@fullcalendar/core@6.1.7)
@@ -690,12 +696,32 @@ packages:
       '@fullcalendar/core': 6.1.7
     dev: false
 
+  /@fullcalendar/interaction@6.1.7(@fullcalendar/core@6.1.7):
+    resolution: {integrity: sha512-C2KHSinc9cFUTcGYxRSIj7cBYNSroce+1d2Wa+HKVHguVv4kQuEvm/oPxJpTLXqFjNLfxyxVac7Zd4U0znjFtg==}
+    peerDependencies:
+      '@fullcalendar/core': ~6.1.7
+    dependencies:
+      '@fullcalendar/core': 6.1.7
+    dev: false
+
   /@fullcalendar/list@6.1.7(@fullcalendar/core@6.1.7):
     resolution: {integrity: sha512-Fl6jGKylhrk+g/RCISsv66vzpzjCFhd4r3nUDeHTAAE375OYGlVPKpH67YaKxpMrofj82JLIzS3JEzyQBZo0Cg==}
     peerDependencies:
       '@fullcalendar/core': ~6.1.7
     dependencies:
       '@fullcalendar/core': 6.1.7
+    dev: false
+
+  /@fullcalendar/react@6.1.7(@fullcalendar/core@6.1.7)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-Pwe88D4zXwP/XQsYWOa1foroF/OpHSLet5CiE4crnaKvngEtzt3SBDIO01agQOpo+yE1KM/n3yE5ePbdJtVJIQ==}
+    peerDependencies:
+      '@fullcalendar/core': ~6.1.7
+      react: ^16.7.0 || ^17 || ^18
+      react-dom: ^16.7.0 || ^17 || ^18
+    dependencies:
+      '@fullcalendar/core': 6.1.7
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /@fullcalendar/timegrid@6.1.7(@fullcalendar/core@6.1.7):
