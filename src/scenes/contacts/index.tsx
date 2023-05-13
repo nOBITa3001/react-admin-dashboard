@@ -56,7 +56,7 @@ export const Contacts = () => {
       <Header
         title="CONTACTS"
         subtitle="List of Contacts for Future Reference"
-      ></Header>
+      />
       <Box
         sx={{
           "& .MuiDataGrid-root": { border: "none" },
