@@ -9,6 +9,7 @@ import { Form } from "./scenes/form";
 import { Sidebar } from "./scenes/global/Sidebar";
 import { Topbar } from "./scenes/global/Topbar";
 import { Invoices } from "./scenes/invoices";
+import { Line } from "./scenes/line";
 import { Pie } from "./scenes/pie";
 import { Team } from "./scenes/team";
 import { ColorModeContext, useMode } from "./theme";
@@ -35,6 +36,7 @@ function App() {
               <Route path="/faq" element={<FAQ />} />
               <Route path="/bar" element={<Bar />} />
               <Route path="/pie" element={<Pie />} />
+              <Route path="/line" element={<Line />} />
             </Routes>
           </main>
         </div>
