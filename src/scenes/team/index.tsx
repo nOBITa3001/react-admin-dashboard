@@ -39,7 +39,6 @@ export const Team = () => {
     {
       field: "accessLevel",
       headerName: "Access Level",
-      // headerAlign: "left",
       flex: 1,
       renderCell: ({ row: { access } }) => {
         return (
